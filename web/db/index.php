@@ -48,7 +48,7 @@
 $password = 'admin';
 
 // Theme! If you want to change theme, save the CSS file in same folder of phpliteadmin or in folder 'themes'
-$theme = 'phpliteadmin.css';
+$theme = 'index.css';
 
 // the default language! If you want to change it, save the language file in same folder of phpliteadmin or in folder 'languages'
 // More about localizations (downloads, how to translate etc.): http://code.google.com/p/phpliteadmin/wiki/Localization

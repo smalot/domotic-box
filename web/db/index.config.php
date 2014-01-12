@@ -10,7 +10,7 @@
 // Please see http://code.google.com/p/phpliteadmin/wiki/Configuration for more details
 
 //password to gain access
-$password = 'admin';
+$password = '27314589';
 
 //directory relative to this file to search for databases (if false, manually list databases in the $databases variable)
 $directory = '.';
@@ -22,12 +22,12 @@ $subdirectories = false;
 //if any of the databases do not exist as they are referenced by their path, they will be created automatically
 $databases = array(
 	array(
-		'path'=> 'database1.sqlite',
-		'name'=> 'Database 1'
+		'path'=> 'development',
+		'name'=> 'Development'
 	),
 	array(
-		'path'=> 'database2.sqlite',
-		'name'=> 'Database 2'
+		'path'=> 'production',
+		'name'=> 'Production'
 	),
 );
 
@@ -35,7 +35,7 @@ $databases = array(
 /* ---- Interface settings ---- */
 
 // Theme! If you want to change theme, save the CSS file in same folder of phpliteadmin or in folder "themes"
-$theme = 'phpliteadmin.css';
+$theme = 'index.css';
 
 // the default language! If you want to change it, save the language file in same folder of phpliteadmin or in folder "languages"
 // More about localizations (downloads, how to translate etc.): http://code.google.com/p/phpliteadmin/wiki/Localization

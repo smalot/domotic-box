@@ -1,0 +1,53 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "372abb0869f15ad93c3430f1ab2e4cee",
+    "packages": [
+        {
+            "name": "sofadesign/limonade",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sofadesign/limonade.git",
+                "reference": "cdad449eea53a08517b0d6889b9875a36d24c018"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sofadesign/limonade/zipball/cdad449eea53a08517b0d6889b9875a36d24c018",
+                "reference": "cdad449eea53a08517b0d6889b9875a36d24c018",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/limonade.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "a PHP micro-framework",
+            "homepage": "https://github.com/sofadesign/limonade",
+            "keywords": [
+                "microframework"
+            ],
+            "time": "2013-10-28 08:28:02"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "sofadesign/limonade": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}

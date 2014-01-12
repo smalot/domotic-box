@@ -1,0 +1,8 @@
+{
+    "require": {
+        "sofadesign/limonade": "dev-master"
+    },
+    "config": {
+        "process-timeout": 1800
+    }
+}
