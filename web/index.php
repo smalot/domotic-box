@@ -28,6 +28,8 @@ function configure()
 
 function before($route = array())
 {
+    header('Content-Type: text/html; charset=utf-8');
+    header('Vary: Accept-Encoding');
     header('X-LIM-route-function: ' . $route['callback']);
     //layout('html_default');
 
@@ -87,7 +89,7 @@ function user_login() {
     }
 
     if ($user) {
-        header('Location: /user/account');
+        header('Location: /');
     }
 
     return html_login(array());
@@ -111,7 +113,7 @@ function user_login_post() {
     if ($user) {
         $_SESSION['user'] = $user->id;
 
-        header('Location: /user/account');
+        header('Location: /');
     } else {
         header('Location: /user/login');
     }
@@ -123,6 +125,16 @@ function user_login_post() {
 dispatch('/user/account', 'user_account', array('authenticate' => TRUE));
 function user_account() {
     return html_default(array());
+}
+
+dispatch('/', 'page_homepage', array('authenticate' => TRUE));
+function page_homepage() {
+    $vars = array(
+        'title' => 'Dashboard',
+        'content' => '<p class="lead">foo</p>',
+    );
+
+    return html_default($vars);
 }
 
 run();
@@ -143,23 +155,29 @@ function authenticate_user() {
 
 function after($output, $route)
 {
-    $time = number_format( microtime(true) - LIM_START_MICROTIME, 6);
+    /*$time = number_format( microtime(true) - LIM_START_MICROTIME, 6);
     $output .= "\n<!-- page rendered in $time sec., on ".date(DATE_RFC822)." -->\n";
     $output .= "<!-- for route\n";
     $output .= print_r($route, true);
     $output .= "-->";
-    return $output;
+    return $output;*/
 }
 
 function html_login($vars) {
     extract($vars);
     
+    ob_start();
     include '../src/layout/login.php';
+
+    echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
 }
 
 function html_default($vars) {
     extract($vars);
     global $user;
 
+    ob_start();
     include '../src/layout/default.php';
+
+    echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
 }

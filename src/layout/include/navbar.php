@@ -11,11 +11,9 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li class="active"><a href="/">Dashboard</a></li>
         <li class="dropdown">
-         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setup <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
@@ -26,11 +24,13 @@
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/user/account">Account</a></li>
-       <li><a href="/user/logout">Logout</a></li>
-       </ul>
+        <li><a href="/user/account" title="My account"><span class="glyphicon glyphicon-user"></span></a></li>
+        <li><a href="/user/logout" title="Logout"><span class="glyphicon glyphicon-log-out"></span></a></li>
+      </ul>
     </div><!--/.nav-collapse -->
   </div>
 </div>

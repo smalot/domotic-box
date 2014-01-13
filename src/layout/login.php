@@ -28,20 +28,16 @@
     <div class="container">
 
       <form class="form-signin" role="form" action="/user/login" method="POST">
-        <h2 class="form-signin-heading">Please sign in</h2>
+        <h2 class="form-signin-heading">Domotic Box</h2>
         <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
         <input type="password" name="password" class="form-control" placeholder="Password" required>
-        <label class="checkbox">
+        <!--label class="checkbox">
           <input type="checkbox" value="remember-me"> Remember me
-        </label>
+        </label-->
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
 
     </div> <!-- /container -->
 
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
   </body>
 </html>
