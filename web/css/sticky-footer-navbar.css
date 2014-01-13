@@ -93,3 +93,82 @@ body {
 code {
   font-size: 80%;
 }
+
+/* Dashboard
+----------------- */
+
+.panel.panel-default .panel-title span {
+  margin-right: 0.5em;
+  font-size: 1.1em;
+}
+
+.panel.panel-default .panel-title span.pull-right {
+  margin-right: 0;
+}
+
+.panel.panel-default .panel-title {
+  font-size: 0.9em;
+}
+
+.panel.panel-default .panel-title a:hover {
+  text-decoration: none;
+}
+
+.panel.panel-default .panel-body {
+  color: #999;
+}
+
+.panel.panel-default .panel-body .center-block {
+  width: 11em;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.panel.panel-default .panel-body .glyphicon {
+  font-size: 3em;
+  color: #C4C4C4;
+  background-color: #F2F2F2;
+  width: 3em;
+  height: 3em;
+  padding: 1em;
+}
+
+.panel.panel-default .panel-body .text {
+  color: #C4C4C4;
+  font-size: 0.9em;
+  text-decoration: none;
+  margin-top: 0.6em;
+  display: inline-block;
+}
+
+.panel.panel-default .panel-body a:hover {
+  text-decoration: none;
+}
+
+.panel.panel-table .panel-body {
+  padding: 0;
+}
+
+.panel.panel-table .panel-body table {
+  font-size: 0.9em;
+  margin-bottom: 0;
+}
+
+.panel.panel-table .panel-body tr.first td {
+  border: 0;
+}
+
+.panel.panel-table .panel-body td {
+  vertical-align: middle;
+}
+
+.panel.panel-table .panel-body td.status,
+.panel.panel-table .panel-body td.date {
+  text-align: center;
+}
+
+.panel.panel-table .panel-body td.date {
+  width: 8em;
+  font-size: 0.9em;
+}
+

@@ -124,17 +124,22 @@ function user_login_post() {
 # able to pass options to routes, which are also available in the 'before' filter in the $route argument
 dispatch('/user/account', 'user_account', array('authenticate' => TRUE));
 function user_account() {
-    return html_default(array());
+    $vars = array(
+        'title' => 'User account',
+        'content' => '<p class="lead">bar</p>',
+    );
+
+    return html_default($vars);
 }
 
 dispatch('/', 'page_homepage', array('authenticate' => TRUE));
 function page_homepage() {
     $vars = array(
-        'title' => 'Dashboard',
-        'content' => '<p class="lead">foo</p>',
+        'title' => 'Tableau de bord',
+        'content' => '',
     );
 
-    return html_default($vars);
+    return html_dashboard($vars);
 }
 
 run();
@@ -178,6 +183,16 @@ function html_default($vars) {
 
     ob_start();
     include '../src/layout/default.php';
+
+    echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
+}
+
+function html_dashboard($vars) {
+    extract($vars);
+    global $user;
+
+    ob_start();
+    include '../src/layout/dashboard.php';
 
     echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
 }
