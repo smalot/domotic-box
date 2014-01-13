@@ -9,7 +9,7 @@ session_start();
 /** @var PDO $db_connexion */
 $db_connexion = null;
 
-$user = null;//$_SESSION['user_id']);
+$user = null;
 
 function configure()
 {
@@ -34,7 +34,10 @@ function before($route = array())
     #print_r($route); exit;
     #inspect the $route array, looking at various options that may have been passed in
     if (@$route['options']['authenticate']) {
-        authenticate_user() or halt("Access denied");
+        if (!authenticate_user()) {
+            header('Location: /user/login');
+            exit;
+        }
     }
 
     if (@$route['options']['validation_function']) {
@@ -88,6 +91,15 @@ function user_login() {
     }
 
     return html_login(array());
+}
+
+dispatch('/user/logout', 'user_logout');
+function user_logout() {
+    unset($_SESSION['user']);
+    session_destroy();
+
+    header('Location: /user/login');
+    exit;
 }
 
 dispatch_post('/user/login', 'user_login_post');
