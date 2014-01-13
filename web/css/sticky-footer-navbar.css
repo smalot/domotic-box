@@ -167,6 +167,11 @@ code {
   text-align: center;
 }
 
+.panel.panel-table .panel-body td.status {
+  font-size: 2em;
+  line-height: 1em;
+}
+
 .panel.panel-table .panel-body td.date {
   width: 8em;
   font-size: 0.9em;

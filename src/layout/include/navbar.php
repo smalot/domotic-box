@@ -13,17 +13,19 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="/">Tableau de bord</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inventory <b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Configuration <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action<span class="badge pull-right">42</span></a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li class="dropdown-header">Entrées</li>
+            <li><a href="/input/switchs">Interrupteurs<span class="badge pull-right">32</span></a></li>
+            <li><a href="/input/sensors">Capteurs<span class="badge pull-right">5</span></a></li>
             <li class="divider"></li>
-            <li class="dropdown-header">Nav header</li>
-            <li><a href="#">Separated link</a></li>
-            <li><a href="#">One more separated link</a></li>
+            <li class="dropdown-header">Sorties</li>
+            <li><a href="/output/lights">Lumières<span class="badge pull-right">8</span></a></li>
+            <li><a href="/output/outlets">Prises<span class="badge pull-right">21</span></a></li>
           </ul>
         </li>
+        <li><a href="/scenarios">Scénarios <span class="badge">15</span></a></li>
+        <li><a href="/alerts">Alertes <span class="badge">8</span></a></li>
         <li><a href="/contact">Contact</a></li>
         <li><a href="/about">About</a></li>
       </ul>
