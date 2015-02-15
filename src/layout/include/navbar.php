@@ -26,8 +26,8 @@
         </li>
         <li><a href="/scenarios">Scénarios <span class="badge">15</span></a></li>
         <li><a href="/alerts">Alertes <span class="badge">8</span></a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/about">About</a></li>
+        <!--li><a href="/contact">Contact</a></li>
+        <li><a href="/about">About</a></li-->
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/user/account" title="My account"><span class="glyphicon glyphicon-user"></span></a></li>

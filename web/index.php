@@ -134,8 +134,12 @@ function user_account() {
 
 dispatch('/', 'page_homepage', array('authenticate' => TRUE));
 function page_homepage() {
+    $sensor = exec("/usr/bin/python /var/www/i2c/Adafruit-Raspberry-Pi-Python-Code/Adafruit_BMP085/Adafruit_BMP085_example2.py");
+    $sensor = json_decode($sensor);
+
     $vars = array(
-        'title' => 'Tableau de bord',
+        'title'   => 'Tableau de bord',
+        'sensor'  => $sensor,
         'content' => '',
     );
 

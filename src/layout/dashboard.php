@@ -50,8 +50,46 @@
                 <h3 class="panel-title"><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Mes équipements</a></h3>
               </div>
               <div class="panel-body">
-                <div class="center-block">
-                 <a href="#"><span class="glyphicon glyphicon-list-alt img-circle"></span><br/><span class="text">Ajouter un équipement</span></a>
+                <div class="row narrow">
+                  <div class="col-sm-4 col-xs-6">
+                    <div class="panel panel-default panel-small panel-hover">
+                      <div class="panel-heading">Salle 1 - <em>sonde</em></div>
+                      <div class="panel-body">
+                        <span class="temperature"><?php echo floor($sensor->temperature); ?>.<sup>°C</sup><sub><?php echo round(($sensor->temperature - floor($sensor->temperature)) * 10); ?></sub></span>
+                        <br/>
+                        <?php echo round($sensor->pressure) . ' hPa'; ?>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-xs-6">
+                    <div class="panel panel-default panel-small panel-hover">
+                      <div class="panel-heading">Chambre 1 - <em>sonde</em></div>
+                      <div class="panel-body">
+                        <span class="temperature"><?php echo floor($sensor->temperature); ?>.<sup>°C</sup><sub><?php echo round(($sensor->temperature - floor($sensor->temperature)) * 10); ?></sub></span>
+                        <br/>
+                        <?php echo round($sensor->pressure) . ' hPa'; ?>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-xs-6">
+                    <div class="panel panel-default panel-small panel-hover">
+                      <div class="panel-heading">Chambre 2 - <em>sonde</em></div>
+                      <div class="panel-body">
+                        <span class="temperature"><?php echo floor($sensor->temperature); ?>.<sup>°C</sup><sub><?php echo round(($sensor->temperature - floor($sensor->temperature)) * 10); ?></sub></span>
+                        <br/>
+                        <?php echo round($sensor->pressure) . ' hPa'; ?>
+                      </div>
+                    </div>
+                  </div>
+                  <!--div class="col-md-3">
+                    <div class="panel panel-default panel-small panel-float">
+                      <div class="panel-body">
+                        <div class="center-block">
+                         <a href="#"><span class="glyphicon glyphicon-list-alt img-circle"></span><br/><span class="text">Ajouter</span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div-->
                 </div>
               </div>
             </div>
@@ -62,7 +100,7 @@
                 <h3 class="panel-title"><a href="#"><span class="glyphicon glyphicon-calendar"></span> Historique <span class="badge pull-right">14</span></a></h3>
               </div>
               <div class="panel-body">
-                <table class="table">
+                <table class="table table-hover">
                   <tbody>
                     <tr class="first">
                       <td class="status">&#149;</td>
@@ -100,7 +138,7 @@
                 <h3 class="panel-title"><a href="#"><span class="glyphicon glyphicon-bell"></span> Mes alertes <span class="badge pull-right">4</span></a></h3>
               </div>
               <div class="panel-body">
-                <table class="table">
+                <table class="table table-hover">
                   <tbody>
                     <tr class="first">
                       <td class="status alert-success">&#149;</td>
